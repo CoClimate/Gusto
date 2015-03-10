@@ -1,0 +1,11 @@
+.btn {
+	display: none;
+}
+
+ul.pagination {
+	display: none;
+}
+.section-content {
+	height: auto;
+	overflow-y: visible;
+}
