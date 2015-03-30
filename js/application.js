@@ -33,7 +33,7 @@
                     },
                     {
                         heading: "Does the material contain one main message statement?",
-                        subheading: "<div class='left-pad'><p><strong>Answer yes if</strong>:</p><ul><li>A main message is the one thing you want to communicate to a person or group that they must remember. A topic, such as severe weather or climate change, isn’t a main message statement. </li><li>The statement may be 1-3 short sentences</li></ul><p><strong>Answer no if</strong>:</p><ul><li>The material contains several messages, and there is no obvious main message</li></ul></div>",
+                        subheading: "<div class='left-pad'><p><strong class='label label-success'>Answer yes if:</strong></p><ul><li>A main message is the one thing you want to communicate to a person or group that they must remember. A topic, such as severe weather or climate change, isn’t a main message statement. </li><li>The statement may be 1-3 short sentences</li></ul><p><strong class='label label-danger'>Answer no if:</strong></p><ul><li>The material contains several messages, and there is no obvious main message</li></ul></div>",
                         example: "#question_1",
                         afterCreate: function (subsection) {
                             $(subsection).find(".yes_no-no").click(function () {
@@ -71,27 +71,27 @@
                     },
                     {
                         heading: "Is the main message at the top, beginning, or front of the material?",
-                        subheading: "<div class='left-pad'><p><strong>Answer yes if</strong>:</p><ul><li>The main message is in the first paragraph or section. A section is a block of text between headings. </li><li>For a Web material, the first section must be fully visible without scrolling </li></ul></div>",
+                        subheading: "<div class='left-pad'><p><strong class='label label-success'>Answer yes if:</strong></p><ul><li>The main message is in the first paragraph or section. A section is a block of text between headings. </li><li>For a Web material, the first section must be fully visible without scrolling </li></ul></div>",
                         example: "#question_2"
                     },
                     {
                         heading: "Is the main message emphasized with visual cues?",
-                        subheading: "<div class='left-pad'><p><strong>Answer yes if</strong>:</p><ul><li>The main message is emphasized with a clear font, color, shapes, lines, arrows or headings</li></ul></div>",
+                        subheading: "<div class='left-pad'><p><strong class='label label-danger'>Answer yes if:</strong></p><ul><li>The main message is emphasized with a clear font, color, shapes, lines, arrows or headings</li></ul></div>",
                         example: "#question_3"
                     },
                     {
                         heading: "Does the material contain at least one image or visual that conveys or supports the main message?",
-                        subheading: "<div class='left-pad'><p>Count photographs, line drawings, cartoons, videos, and infographics as visuals.</p><p><strong>Answer no if</strong>:</p><ul><li>The visual does not include people or human-scale tools and surroundings</li><li>Inauthentic stock images are used</li><li>The visual doesn&rsquo;t have a caption or labels</li><li>The visual has people who aren&rsquo;t performing the recommended practices</li></ul></div>",
+                        subheading: "<div class='left-pad'><p>Count photographs, line drawings, cartoons, videos, and infographics as visuals.</p><p><strong class='label label-danger'>Answer no if:</strong></p><ul><li>The visual does not include people or human-scale tools and surroundings</li><li>Inauthentic stock images are used</li><li>The visual doesn&rsquo;t have a caption or labels</li><li>The visual has people who aren&rsquo;t performing the recommended practices</li></ul></div>",
                         example: "#question_4"
                     },
                     {
                         heading: "Does the material include one or more specific calls to action for the primary audience?",
-                        subheading: "<div class='left-pad'><p><strong>Answer yes if</strong>:</p><ul><li>The material includes a recommendation for a specific practice, a shift to existing practices, a prompt to get more information, a request to share information with someone else, or a call for a specific program or policy change</li></ul></p><p><strong>Answer no if</strong>:</p><ul><li>The call to action is for someone other than the primary audience</li><li>The call to action is vague or beyond the scope of what the audience can reasonably contribute to</li></ul></div>",
+                        subheading: "<div class='left-pad'><p><strong class='label label-success'>Answer yes if:</strong></p><ul><li>The material includes a recommendation for a specific practice, a shift to existing practices, a prompt to get more information, a request to share information with someone else, or a call for a specific program or policy change</li></ul></p><p><strong class='label label-danger'>Answer no if:</strong></p><ul><li>The call to action is for someone other than the primary audience</li><li>The call to action is vague or beyond the scope of what the audience can reasonably contribute to</li></ul></div>",
                         example: "#question_5"
                     },
                     {
                         heading: "Do both the main message and the call to action use the active voice and third-person?",
-                        subheading: "<div class='left-pad'><p><strong>Answer no if</strong>:</p><ul><li>Only the main message or only the call to action uses the active voice</li><li>Only the main message or only the call to action uses second-person</li></ul></div>",
+                        subheading: "<div class='left-pad'><p><strong class='label label-danger'>Answer no if:</strong></p><ul><li>Only the main message or only the call to action uses the active voice</li><li>Only the main message or only the call to action uses second-person</li></ul></div>",
                         example: "#question_6",
                         afterCreate: function (subsection) {
                             var q1 = parseInt(self.answers.core[1].a, 10) === 0,
@@ -113,22 +113,22 @@
                     },
                     {
                         heading: "Does the material <u>always</u> use words, phrasings, metaphors and idioms the primary audience uses? ",
-                        subheading: "<div class='left-pad'><p>Acronyms and abbreviations must be spelled out and explained if unfamiliar to the audience.</p><p><strong>Answer yes if</strong>:</p><ul><li>All specialized or unfamiliar terms are explained or described (not just defined) the first time they are used</li><li>Metaphors are consistent with the audiences' prior experiences</li></ul></div>",
+                        subheading: "<div class='left-pad'><p>Acronyms and abbreviations must be spelled out and explained if unfamiliar to the audience.</p><p><strong class='label label-success'>Answer yes if:</strong></p><ul><li>All specialized or unfamiliar terms are explained or described (not just defined) the first time they are used</li><li>Metaphors are consistent with the audiences' prior experiences</li></ul></div>",
                         example: "#question_7"
                     },
                     {
                         heading: "Does the material use bulleted or numbered lists?",
-                        subheading: "<div class='left-pad'><p><strong>Answer yes if</strong>:</p><ul><li>The material contains a list with 3 to 5 items</li><li>The list is broken up into sub-lists if there are more than 7 items</li><li>The list is not for additional information or references only or at the end of the material</li></ul></div>",
+                        subheading: "<div class='left-pad'><p><strong class='label label-success'>Answer yes if:</strong></p><ul><li>The material contains a list with 3 to 5 items</li><li>The list is broken up into sub-lists if there are more than 7 items</li><li>The list is not for additional information or references only or at the end of the material</li></ul></div>",
                         example: "#question_8"
                     },
                     {
                         heading: "Is the material organized in chunks with headings?",
-                        subheading: "<div class='left-pad'><p>This item applies to prose text and lists.</p><p><strong>Answer no if</strong>:</p><ul><li>The chunks do not reinforce the main message</li><li>The chunks contain more than one idea each</li><li>The headings don&rsquo;t match the information chunks</li></ul></div>",
+                        subheading: "<div class='left-pad'><p>This item applies to prose text and lists.</p><p><strong class='label label-danger'>Answer no if:</strong></p><ul><li>The chunks do not reinforce the main message</li><li>The chunks contain more than one idea each</li><li>The headings don&rsquo;t match the information chunks</li></ul></div>",
                         example: "#question_9"
                     },
                     {
                         heading: "Is the most important information the primary audience needs summarized in the first paragraph or section?",
-                        subheading: "<div class='left-pad'><p>The most important information must include the main message. A section is a block of text between headings.</p> <p><strong>Answer no if</strong>:</p><ul><li>For Web material: the first section must be fully visible without scrolling</li><li>For Audio material: the most important information is not repeated to remind listeners</li><li>For Visual material: the most important information does not have a strong visual hierarchy</li></ul></div>",
+                        subheading: "<div class='left-pad'><p>The most important information must include the main message. A section is a block of text between headings.</p> <p><strong class='label label-danger'>Answer no if:</strong></p><ul><li>For Web material: the first section must be fully visible without scrolling</li><li>For Audio material: the most important information is not repeated to remind listeners</li><li>For Visual material: the most important information does not have a strong visual hierarchy</li></ul></div>",
                         example: "#question_10",
                         afterCreate: function (subsection) {
                             var q1 = parseInt(self.answers.core[1].a, 10) === 0;
@@ -149,7 +149,7 @@
                     },
                     {
                         heading: "Does the material explain what authoritative sources, such as subject matter experts and agency spokespersons, know and don\'t know about the topic?",
-                        subheading: "<div class='left-pad'><p><strong>Answer yes if</strong>:</p><ul><li>The material addresses both</li></ul><p><strong>Answer no if</strong>:</p><ul><li>The material addresses only one (what is known or not known)</li></ul></div>",
+                        subheading: "<div class='left-pad'><p><strong class='label label-success'>Answer yes if:</strong></p><ul><li>The material addresses both</li></ul><p><strong class='label label-danger'>Answer no if:</strong></p><ul><li>The material addresses only one (what is known or not known)</li></ul></div>",
                         example: "#question_11"
                     },
                     {
@@ -193,12 +193,12 @@
                     },
                     {
                         heading: "Does the material explain why the practices are important and meaningful to the primary audience?",
-                        subheading: "<div class='left-pad'><p><strong>Answer no if</strong>:</p><ul><li>Only numbers are used to convey importance with no other relevant information for the audience</li><li>You do not describe how the practices help fulfill the audience's goals or aspirations, </li></ul></div>",
+                        subheading: "<div class='left-pad'><p><strong class='label label-danger'>Answer no if:</strong></p><ul><li>Only numbers are used to convey importance with no other relevant information for the audience</li><li>You do not describe how the practices help fulfill the audience's goals or aspirations, </li></ul></div>",
                         example: "#question_13"
                     },
                     {
                         heading: "Do the recommendations include specific directions about how to acquire new practices or perform existing ones?",
-                        subheading: "<div class='left-pad'><p>This may include step-by-step directions, demonstrations, or a simple description (for example: Look for times of day when the electricity grid is using less fossil fuel-generated power).</p><p><strong>Answer yes if</strong>:</p><ul><li>The material includes information about when, where, and how to find out more information</li><li>The material mentions when, where, and how to shift, adjust, transform existing behaviors and practices</li></ul></div>",
+                        subheading: "<div class='left-pad'><p>This may include step-by-step directions, demonstrations, or a simple description (for example: Look for times of day when the electricity grid is using less fossil fuel-generated power).</p><p><strong class='label label-success'>Answer yes if:</strong></p><ul><li>The material includes information about when, where, and how to find out more information</li><li>The material mentions when, where, and how to shift, adjust, transform existing behaviors and practices</li></ul></div>",
                         example: "#question_14"
                     },
                     {
@@ -240,12 +240,12 @@
                     },
                     {
                         heading: "Does the material explain the nature of the risk or uncertainty?",
-                        subheading: "<div class='left-pad'><p class='tighten-line'><strong>Answer yes if</strong>:</p><ul><li>The material focuses on what is known and how remaining uncertainty is being addressed.</li><li>The material states the threat or harm and how and why people may or may not be affected</li></ul></div><div class='left-pad'><p class='tighten-line'><strong>Answer no if</strong>:</p><ul><li>The material does not confidently acknowledge uncertainty</li><li>The material has only the threat or harm but no explanation or neglects to provide tangible steps that people can take</li></ul></div><div class='left-pad'><p class='smaller'>For example, if the material states there are 1,000 new cases of a contagious disease in Springfield, does it also state that people in Springfield may be more likely to get the disease, why they may be more likely, and how serious the threat of the disease is?</p></div>",
+                        subheading: "<div class='left-pad'><p class='tighten-line'><strong class='label label-success'>Answer yes if:</strong></p><ul><li>The material focuses on what is known and how remaining uncertainty is being addressed.</li><li>The material states the threat or harm and how and why people may or may not be affected</li></ul></div><div class='left-pad'><p class='tighten-line'><strong class='label label-danger'>Answer no if:</strong></p><ul><li>The material does not confidently acknowledge uncertainty</li><li>The material has only the threat or harm but no explanation or neglects to provide tangible steps that people can take</li></ul></div><div class='left-pad'><p class='smaller'>For example, if the material states there are 1,000 new cases of a contagious disease in Springfield, does it also state that people in Springfield may be more likely to get the disease, why they may be more likely, and how serious the threat of the disease is?</p></div>",
                         example: "#question_18"
                     },
                     {
                         heading: "Does the material address both the risks and benefits of recommended practices?",
-                        subheading: "<div class='left-pad'><p>This includes actual risks and benefits as well as those perceived by your audience.</p><p><strong>Answer no if</strong>:</p><ul><li>The material addresses only risks or only benefits</li></ul><p><strong>Answer not applicable (N/A) if</strong>:</p><ul><li>No practical recommendations are presented</li></ul></div>",
+                        subheading: "<div class='left-pad'><p>This includes actual risks and benefits as well as those perceived by your audience.</p><p><strong class='label label-danger'>Answer no if:</strong></p><ul><li>The material addresses only risks or only benefits</li></ul><p><strong class='label label-default'>Answer not applicable (N/A) if:</strong></p><ul><li>No practical recommendations are presented</li></ul></div>",
                         example: "#question_19",
                         hasNA: true,
                         afterCreate: function (subsection) {
@@ -266,7 +266,7 @@
                     },
                     {
                         heading: "Does the material use multiple and mixed approaches to describe risk? If the material uses numeric probability or statistic to describe risk, is it also explained with words or a visual?",
-                        subheading: "<div class='left-pad'><p>Examples of probability information in a risk message are numbers (such as 1 in 5 or 20%). People may not interpret estimates or words in the same way. A large risk to one person may be a small risk to someone else.</p><p><strong>Answer yes if</strong>:</p><ul><li>The material presents numeric risk and also uses text or visuals to explain the probability</li><li>The material uses multiple labels: 90% and very likely and often and probable<li>The material avoids negative labels like “unlikely”</li></ul></p><p><strong>Answer no if</strong>:</p><ul><li>The material only presents numeric risk</li><li>The material describes risk using only one word or description</li></ul></p><p><strong>Answer not applicable (N/A) if</strong>:</p><ul><li>The material does not include this type of probability information</li></ul></div>",
+                        subheading: "<div class='left-pad'><p>Examples of probability information in a risk message are numbers (such as 1 in 5 or 20%). People may not interpret estimates or words in the same way. A large risk to one person may be a small risk to someone else.</p><p><strong class='label label-success'>Answer yes if:</strong></p><ul><li>The material presents numeric risk and also uses text or visuals to explain the probability</li><li>The material uses multiple labels: 90% and very likely and often and probable<li>The material avoids negative labels like “unlikely”</li></ul></p><p><strong class='label label-danger'>Answer no if:</strong></p><ul><li>The material only presents numeric risk</li><li>The material describes risk using only one word or description</li></ul></p><p><strong class='label label-default'>Answer not applicable (N/A) if:</strong></p><ul><li>The material does not include this type of probability information</li></ul></div>",
                         example: "#question_20",
                         hasNA: true
                     },

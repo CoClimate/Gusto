@@ -1537,6 +1537,11 @@ blockquote.pull-right .small:after {
     background-color: #f0f7fd;
     border-color: #d0e3f0;
 }
+
+.bs-callout-success {
+    background-color: #eff9f7;
+    border-color: #a5efdd;
+}
  
 .bs-callout-danger h4,
 .bs-callout-danger a.alert-link {
