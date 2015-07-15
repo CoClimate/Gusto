@@ -567,7 +567,6 @@
 
           </div>
 
-        </div>
 
 
 
@@ -583,8 +582,7 @@
 
         </div>
 
-      </div>
-
+      </div></div></div>
 
 
       <div class='subsection'>
@@ -664,7 +662,7 @@
 
 
 
-    </div>
+    </div></div>
 
 
 
@@ -1159,11 +1157,11 @@
 
             <div class='form-group col-sm-12'>
 
-              <div class='radio-inline col-sm-6)'>
+              <div class='checkbox-inline col-sm-6)'>
 
                 <label>
 
-                  <input type='radio' class='answer yes_no-yes hide-warning' name='yes_no' value='1' />Yes
+                  <input type='checkbox' class='answer yes_no-yes hide-warning' name='yes_no' value='1' />Yes
 
                 </label>
 
@@ -1171,11 +1169,11 @@
 
 
 
-              <div class='radio-inline col-sm-6)'>
+              <div class='checkbox-inline col-sm-6)'>
 
                 <label>
 
-                  <input type='radio' class='answer yes_no-no has-warning' name='yes_no' value='0' />No
+                  <input type='checkbox' class='answer yes_no-no has-warning' name='yes_no' value='0' />No
 
                 </label>
 
@@ -1464,11 +1462,11 @@
 
             <div class='form-group col-sm-12'>
 
-              <div class='radio-inline col-sm-6)'>
+              <div class='checkbox-inline col-sm-6)'>
 
                 <label>
 
-                  <input type='radio' class='answer yes_no-yes hide-warning' name='yes_no' value='1' />Yes
+                  <input type='checkbox' class='answer yes_no-yes hide-warning' name='yes_no' value='1' />Yes
 
                 </label>
 
@@ -1476,11 +1474,11 @@
 
 
 
-              <div class='radio-inline col-sm-6)'>
+              <div class='checkbox-inline col-sm-6)'>
 
                 <label>
 
-                  <input type='radio' class='answer yes_no-no has-warning' name='yes_no' value='0' />No
+                  <input type='checkbox' class='answer yes_no-no has-warning' name='yes_no' value='0' />No
 
                 </label>
 
@@ -1743,21 +1741,21 @@
 
             <div class='form-group col-sm-12'>
 
-              <div class='radio-inline col-sm-6)'>
+              <div class='checkbox-inline col-sm-6)'>
 
                 <label>
 
-                  <input type='radio' class='answer yes_no-yes hide-warning' name='yes_no' value='1' />Yes
+                  <input type='checkbox' class='answer yes_no-yes hide-warning' name='yes_no' value='1' />Yes
 
                 </label>
 
               </div>
 
-              <div class='radio-inline col-sm-6)'>
+              <div class='checkbox-inline col-sm-6)'>
 
                 <label>
 
-                  <input type='radio' class='answer yes_no-no has-warning' name='yes_no' value='0' />No
+                  <input type='checkbox' class='answer yes_no-no has-warning' name='yes_no' value='0' />No
 
                 </label>
 
@@ -3077,7 +3075,7 @@ effect connection between the risk and the effects of being at risk.</p>
 
       $('.intro-next_button').click(function(){
 
-        var answer = $('.subsection.active').find('input:radio[name=yes_no]:checked').val()
+        var answer = $('.subsection.active').find('input:checkbox[name=yes_no]:checked').val()
 
         if (answer == 0){
 

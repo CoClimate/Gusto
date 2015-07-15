@@ -99,14 +99,14 @@
 
                             if (q1 || q2) {
                                 $(subsection).find('input.yes_no-no').attr({checked: true});
-                                $(subsection).find("input:radio").attr('disabled', true);
+                                $(subsection).find("input:checkbox").attr('disabled', true);
                                 $(subsection).find(".next_button").removeClass("btn-default").addClass("btn-success");
                                 if ($(subsection).find('.alert').length === 0) {
                                     $('<div class="alert alert-info warning top-spacing bottom-spacing inside" style=""><h4>Scoring Notes</h4><p>Because you answered no on questions 1 or 5, this question will be scored as "no"</p></div>').insertBefore($(subsection).find('.question-comment-wrapper'));
                                 }
                             } else {
                                 $(subsection).find('.alert').remove();
-                                $(subsection).find("input:radio").attr('disabled', false);
+                                $(subsection).find("input:checkbox").attr('disabled', false);
                                 $(subsection).find(".next_button").removeClass("btn-success").addClass("btn-default");
                             }
                         }
@@ -135,14 +135,14 @@
 
                             if (q1) {
                                 $(subsection).find('input.yes_no-no').attr({checked: true});
-                                $(subsection).find("input:radio").attr('disabled', true);
+                                $(subsection).find("input:checkbox").attr('disabled', true);
                                 $(subsection).find(".next_button").removeClass("btn-default").addClass("btn-success");
                                 if ($(subsection).find('.alert').length === 0) {
                                     $('<div class="alert alert-info warning top-spacing bottom-spacing inside" style=""><h4>Scoring Notes</h4><p>Because you answered no on question 1, this question will be scored as "no"</p></div>').insertBefore($(subsection).find('.question-comment-wrapper'));
                                 }
                             } else {
                                 $(subsection).find('.alert').remove();
-                                $(subsection).find("input:radio").attr('disabled', false);
+                                $(subsection).find("input:checkbox").attr('disabled', false);
                                 $(subsection).find(".next_button").removeClass("btn-success").addClass("btn-default");
                             }
                         }
@@ -252,14 +252,14 @@
                             var skipBehavior = $('div#section_behavior div.subsection:first input.yes_no-no:checked')[0] != null;
                             if (skipBehavior) {
                                 $(subsection).find('input#yes_no-na').attr({checked: true});
-                                $(subsection).find("input:radio").attr('disabled', true);
+                                $(subsection).find("input:checkbox").attr('disabled', true);
                                 $(subsection).find(".next_button").removeClass("btn-default").addClass("btn-success");
                                 if ($(subsection).find('.alert').length === 0) {
                                     $('<div class="alert alert-info warning top-spacing bottom-spacing inside" style=""><h4>Scoring Notes</h4><p>Because you answered no to the intro question in Part B, this question will be scored as "N/A".</p></div>').insertBefore($(subsection).find('.question-comment-wrapper'));
                                 }
                             } else {
                                 $(subsection).find('.alert').remove();
-                                $(subsection).find("input:radio").attr('disabled', false);
+                                $(subsection).find("input:checkbox").attr('disabled', false);
                                 $(subsection).find(".next_button").removeClass("btn-success").addClass("btn-default");
                             }
                         }
@@ -725,15 +725,15 @@
                         "<div class='fieldset'><h2 class='col-sm-12 fake-h4'>" + "<span class='item-number'>" + question.indexNum + ".</span> " + question.heading + "</h2></div><p class='col-sm-12'>" + question.subheading + "</p>"
                 ).append(
                     $("<div class='form-group col-sm-8'></div>").append(
-                        $("<div class='radio-inline " + (question.hasNA ? "col-sm-4" : "col-sm-6") + "'><label><input type='radio' class='answer yes_no-yes' name='yes_no' value='1' />Yes</label></div>")
+                        $("<div class='checkbox-inline " + (question.hasNA ? "col-sm-4" : "col-sm-6") + "'><label><input type='checkbox' class='answer yes_no-yes' name='yes_no' value='1' />Yes</label></div>")
                             .change(function () {$(self.currentSubsection).find('.next_button').removeClass('btn-default').addClass('btn-success')})
                     ).append(
-                        $("<div class='radio-inline " + (question.hasNA ? "col-sm-4" : "") + "'><label><input type='radio' class='answer yes_no-no' name='yes_no' value='0' />No</label></div>")
+                        $("<div class='checkbox-inline " + (question.hasNA ? "col-sm-4" : "") + "'><label><input type='checkbox' class='answer yes_no-no' name='yes_no' value='0' />No</label></div>")
                             .change(function () {$(self.currentSubsection).find('.next_button').removeClass('btn-default').addClass('btn-success')})
                     ).append(
                         (function () {
                             if (question.hasNA) {
-                                return $("<div class='radio-inline'><label><input type='radio' class='answer' name='yes_no' id='yes_no-na' value='NA' />N/A</label></div>")
+                                return $("<div class='checkbox-inline'><label><input type='checkbox' class='answer' name='yes_no' id='yes_no-na' value='NA' />N/A</label></div>")
                                     .change(function () {$(self.currentSubsection).find('.next_button').removeClass('btn-default').addClass('btn-success')})
                             } else {
                                 return "";
@@ -808,7 +808,7 @@
                     return true;
                 }
             } else {
-                if (form.hasClass('ignore-me') && $('.subsection.active input[type=radio]').length > 0 && $('.subsection.active input[type=radio]:checked').length === 0) {
+                if (form.hasClass('ignore-me') && $('.subsection.active input[type=checkbox]').length > 0 && $('.subsection.active input[type=checkbox]:checked').length === 0) {
                     return false;
                 } else {
                     return true;
@@ -816,7 +816,7 @@
             }
         }
 
-        var answer = form.find('input:radio[name=yes_no]:checked').val();
+        var answer = form.find('input:checkbox[name=yes_no]:checked').val();
         if (answer === void 0) {
             return false;
         } else {
