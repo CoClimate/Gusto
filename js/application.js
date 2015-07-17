@@ -71,7 +71,7 @@
                     },
                     {
                         heading: "Is the main message at the top, beginning, or front of the material?",
-                        subheading: "<div class='left-pad'><p><strong class='label label-success'>Answer yes if:</strong></p><ul><li>The main message is in the first paragraph or section. A section is a block of text between headings. </li><li>For a Web material, the first section must be fully visible without scrolling </li></ul></div>",
+                        subheading: "<div class='left-pad'><p><strong class='label label-success'>Answer yes if:</strong></p><ul><li>The main message is in the first paragraph or section. A section is a block of text between headings. </li><li>For a Web material, the first section must be fully visible without scrolling </li></ul><p><strong class='label label-danger'>Answer no if:</strong></p><ul><li>The main heading is phrased in the form of a question.</li></ul></div>",
                         example: "#question_2"
                     },
                     {
@@ -128,7 +128,7 @@
                     },
                     {
                         heading: "Is the most important information the primary audience needs summarized in the first paragraph or section?",
-                        subheading: "<div class='left-pad'><p>The most important information must include the main message. A section is a block of text between headings.</p> <p><strong class='label label-danger'>Answer no if:</strong></p><ul><li>For Web material: the first section must be fully visible without scrolling</li><li>For Audio material: the most important information is not repeated to remind listeners</li><li>For Visual material: the most important information does not have a strong visual hierarchy</li></ul></div>",
+                        subheading: "<div class='left-pad'><p>The most important information must include the main message.</p> <p><strong class='label label-success'>Answer yes if:</strong></p><ul><li>For Web material: the first section is fully visible without scrolling.</li><li>For Audio material: the most important information is repeated to remind listeners.</li><li>For Visual material: the most important information has a strong visual hierarchy.</li></ul></div>",
                         example: "#question_10",
                         afterCreate: function (subsection) {
                             var q1 = parseInt(self.answers.core[1].a, 10) === 0;
@@ -681,8 +681,8 @@
         if (!$(this.currentSubsection).hasClass('unscored')) {
             this.createQuestion();
 
-            $(this.currentSubsection).find('.example').hide();
-            $(this.currentSubsection).find('.show-example').text('Show Example').removeClass('example-active');
+            $(this.currentSubsection).find('.example').show();
+            $(this.currentSubsection).find('.show-example').text('Hide Example').removeClass('example-active');
         }
 
         this.tallyScore();
@@ -748,11 +748,11 @@
                             var form = $(this).parents('form');
 
                             if ($(this).hasClass('example-active')) {
-                                $(this).text('Show Example').removeClass('example-active');
-                                form.find('.example').hide();
-                            } else {
-                                $(this).text('Hide Example').addClass('example-active');
+                                $(this).text('Hide Example').removeClass('example-active');
                                 form.find('.example').show();
+                            } else {
+                                $(this).text('Show Example').addClass('example-active');
+                                form.find('.example').hide();
                             }
                         }).on('keyup', function (e) {
                             if (e.keyCode == 13) $(this).trigger('click')
