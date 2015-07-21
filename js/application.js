@@ -90,7 +90,7 @@
                         example: "#question_5"
                     },
                     {
-                        heading: "Do both the main message and the call to action use the active voice and third-person?",
+                        heading: "Do both the main message and the call to action use the active voice and third-person plural?",
                         subheading: "<div class='left-pad'><p><strong class='label label-danger'>Answer no if:</strong></p><ul><li>Only the main message or only the call to action uses the active voice</li><li>Only the main message or only the call to action uses second-person</li></ul></div>",
                         example: "#question_6",
                         afterCreate: function (subsection) {
